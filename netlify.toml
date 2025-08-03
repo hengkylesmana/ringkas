@@ -1,0 +1,12 @@
+# Konfigurasi untuk build di Netlify
+[build]
+  # Direktori yang berisi file-file frontend (HTML, CSS, JS)
+  publish = "public"
+  # Direktori tempat Netlify akan mencari serverless functions
+  functions = "netlify/functions"
+
+# Aturan redirect untuk membuat API lebih mudah diakses
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
